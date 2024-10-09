@@ -1,15 +1,31 @@
 export interface PropertyItem {
-  id: string;
-  name: string;
+  _id?: string;
   type: string;
   rooms: number;
   bathrooms: number;
-  livingRoom: boolean;
-  diningRoom: boolean;
-  hallRoom: boolean;
-  familyRoom: boolean;
-  kitchen: boolean;
-  serviceRoom: boolean;
-  laundaryRoom: boolean;
-  balcony: boolean;
+  hasLivingRoom: boolean;
+  hasDiningRoom: boolean;
+  hasHallRoom: boolean;
+  hasFamilyRoom: boolean;
+  hasKitchen: boolean;
+  hasServiceRoom: boolean;
+  hasLaundryRoom: boolean;
+  hasBalcony: boolean;
+  hasGarden: boolean;
+  title: string;
+  description: string;
+  price: number;
+  location: string;
+  owner?: Owner;
+  ownerId?: string;
+}
+
+export interface Owner {
+  email?: string;
+  firstName?: string;
+  lastName?: string;
+  hasOnboarded?: boolean;
+  role?: string;
+  subscriptionStatus?: string;
+  _id?: string;
 }
